@@ -1,6 +1,59 @@
-## 
+# 数组
 
-### 最大子序列和
+| 类型 | 题目       | 难度 |
+| :--: | ---------- | :--: |
+| 数组 | 两数之和、 | 简单 |
+|      |            | 中等 |
+|      |            | 困难 |
+|      |            |      |
+
+
+
+## 1. 两数之和
+
+### 1. 暴力解($O(N^2), O(1)$)
+
+```c++
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        int n = nums.size();
+        for (int i = 0; i < n; ++i) {
+            for (int j = i + 1; j < n; ++j) {			// 需要从i+1开始
+                if (nums[i] + nums[j] == target) {
+                    return {i, j};
+                }
+            }
+        }
+        return {};
+    }
+};
+```
+
+### 2. 哈希表($O(N), O(N)$)
+
+```c++
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int, int> hashtable;
+        for (int i = 0; i < nums.size(); ++i) {
+            auto it = hashtable.find(target - nums[i]);
+            if (it != hashtable.end()) {
+                return {it->second, i};
+            }
+            hashtable[nums[i]] = i;
+        }
+        return {};
+    }
+};
+```
+
+## 2. 两数相加
+
+
+
+## 3. 最大子序列和
 
 ### 1. 暴力解
 

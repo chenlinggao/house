@@ -1,4 +1,4 @@
-# 背景
+#  背景
 
 ## 存储方式
 
@@ -55,7 +55,7 @@ class list {
 * 顺序表比较适合**静态的**、**经常做线性访问**的线性表
   * ![image-20220707163444005](imgs/image-20220707163444005.png)
 
-#### 顺序表类模板
+#### --- 类模板 ---
 
 ```c++
 template <class elemType>
@@ -174,7 +174,7 @@ void seqList<elemType>::remove(int i) {
 * 头指针的作用？
   * 以确定线性表中第一个元素对应的存储位置。
 
-#### 类模板
+#### --- 类模板 ---
 
 ```c++
 template <class elemType>
@@ -245,7 +245,7 @@ void sLinkList<elemType>::insert(int i, const elemType &x){
 }
 ```
 
-#### move
+#### ==move==
 
 ```c++
 // 返回指向第i个元素的指针。
@@ -326,5 +326,179 @@ void sLinkList<elemType>::traverse() const {
 
 ### 3. 双链表
 
+#### --- 类模板 ---
+
+```c++
+template <class elemType>
+class dLinkList:public list<elemType> {
+    private:
+    	// 定义节点类, struct将node内部变成公有, 但node是私有.(有点疑惑)
+    	struct node{
+            elemType data;	// 节点值
+            node *prev, *tail;
+            node(const elemType &x, node *p=NULL, node *n=NULL) {
+                data = x;
+                next = n;
+                prev = p;
+            }
+            ~node(){}
+        };
+    
+    	node *head, *tail;
+    	int currentLength;
+    	node *move(int i) const;
+	
+    public:
+    	dLinkList();
+    	~dLinkList() {
+            clear();
+            delete head;
+            delete tail;
+        }
+    	void clear();
+    	int length() const{return currrentLength;}
+    	void insert(int i, const elemType &x);
+    	void remove(int i);
+    	int search(const elemType &x) const;
+    	elemType visit(int i) const;
+    	void traverse() const;
+};
+```
+
+#### - 构造函数 -
+
+```c++
+template <class elemType>
+void dLinkList<elemType>::dLinkList(){
+    head = new node;
+    head->next = tail = new node;
+    tail->prev = head;
+    currentLength = 0;
+}
+```
+
+#### insert
+
+```c++
+template <class elemType>
+void dLinkList<elemType>::insert(int i, const elemType &x) {
+    node *pos, *tmp;
+
+    pos = move(i);                  
+    tmp = new node(x, pos->prev, pos);
+    pos->prev->next = tmp;        
+    pos->prev = tmp;            
+
+    ++currentLength;
+}
+```
+
+#### remove
+
+```c++
+template <class elemType>
+void dLinkList<elemType>::remove(int i) {
+    node *pos;
+
+    pos = move(i);                       
+    pos->prev->next = pos->next;           
+    pos->next->prev = pos->prev;
+
+    delete pos;
+    --currentLength;
+}
+```
+
 # 算法题
 
+```
+#include <algorithm> 
+#define N 100005 
+using namespace std; 
+
+struct node { 
+    int l, r; 
+}nod[N]; 
+
+int head, tail; 
+void add(int a, int b, int c) { 
+    nod[a].r = b; 
+    nod[b].r = c; 
+    nod[c].l = b; 
+    nod[b].l = a; 
+} 
+
+void del(int a, int b, int c) { 
+    nod[a].r = c; 
+    nod[c].l = a; 
+    nod[b].r = nod[b].l = 0; 
+} 
+
+int n, m; 
+int main() { 
+    scanf("%d", &n); 
+    head = n + 1;  
+    tail = n + 2; 
+    nod[head].r = tail; 
+    nod[tail].l = head; 
+    add(head, 1, tail); 
+
+    for (int i = 2; i <= n; ++i) { 
+        int x, y; 
+        scanf("%d%d", &x, &y); 
+        if (!y) add(nod[x].l, i, x); 
+        else add(x, i, nod[x].r); 
+    } 
+    scanf("%d", &m); 
+    for (int i = 0; i < m; ++i) { 
+        int x; 
+        scanf("%d", &x); 
+        if (!nod[x].l) continue; 
+        del(nod[x].l, x, nod[x].r); 
+    } 
+
+    for (int i = nod[head].r; i != tail; i = nod[i].r) printf("%d ", i); 
+    return 0; 
+}
+```
+
+```
+#define N 500010
+
+using namespace std; 
+
+int head[100010], nxt[N], val[N], out[N], cnt;
+
+int main() {
+    int n, m, t, x, y;
+    cin >> n >> m;
+    while (m--) {
+        cin >> t;
+        if (t == 1) {
+            cin >> x >> y;
+            val[++cnt] = y;
+            nxt[cnt] = head[x];
+            head[x] = cnt;
+        }
+        else if (t == 2) {
+            cin >> x;
+            head[x] = nxt[head[x]];
+        }
+        else {
+            for (int i = 1; i <= n; i++) {
+                int oc = 0, pos = head[i];
+                while (pos) {
+                    out[++oc] = val[pos];
+                    pos = nxt[pos];
+                }
+                if (oc == 0)
+                    cout << "none";
+                while (oc)
+                    cout << out[oc--] << " ";
+                cout << endl;
+            }
+        }
+    }
+    return 0;
+}
+```
