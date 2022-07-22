@@ -9,7 +9,7 @@
 
 # 数据结构
 
-## 顺序结构
+## 一、顺序结构
 
 ###  基本模板类：线性表
 
@@ -409,96 +409,259 @@ void dLinkList<elemType>::remove(int i) {
 }
 ```
 
-# 算法题
+## 二、栈
 
+### 1. 顺序栈
+
+#### --- 类模板 ---
+
+```c++
+template <class elemType>
+class seqStack: public stack<elemType>{
+    private:
+        elemType *elem;
+        int top_p;
+        int maxSize;
+        void doubleSpace();
+    public:
+        seqStack(int initSize = 10)；
+        // 析构函数
+        ~seqStack() { delete [] elem; }
+        // 判断栈是否为空，若top_p的值为-1，返回true，否则返回false。
+        bool isEmpty() const { return top_p == -1; }      
+        void push(const elemType &x) ；
+        // 出栈：返回栈顶元素，并把元素数量减1
+        elemType pop() { return elem[top_p--]; }
+        // top：与pop类似，只是不需要将top_p减1
+        elemType top() const { return elem[top_p]; }
+}；
 ```
-#include <algorithm> 
-#define N 100005 
-using namespace std; 
 
-struct node { 
-    int l, r; 
-}nod[N]; 
+#### 构造函数
 
-int head, tail; 
-void add(int a, int b, int c) { 
-    nod[a].r = b; 
-    nod[b].r = c; 
-    nod[c].l = b; 
-    nod[b].l = a; 
-} 
-
-void del(int a, int b, int c) { 
-    nod[a].r = c; 
-    nod[c].l = a; 
-    nod[b].r = nod[b].l = 0; 
-} 
-
-int n, m; 
-int main() { 
-    scanf("%d", &n); 
-    head = n + 1;  
-    tail = n + 2; 
-    nod[head].r = tail; 
-    nod[tail].l = head; 
-    add(head, 1, tail); 
-
-    for (int i = 2; i <= n; ++i) { 
-        int x, y; 
-        scanf("%d%d", &x, &y); 
-        if (!y) add(nod[x].l, i, x); 
-        else add(x, i, nod[x].r); 
-    } 
-    scanf("%d", &m); 
-    for (int i = 0; i < m; ++i) { 
-        int x; 
-        scanf("%d", &x); 
-        if (!nod[x].l) continue; 
-        del(nod[x].l, x, nod[x].r); 
-    } 
-
-    for (int i = nod[head].r; i != tail; i = nod[i].r) printf("%d ", i); 
-    return 0; 
+```c++
+template <class elemType>
+seqStack<elemType>::seqStack(int initSize) {
+    elem = new elemType[initSize];
+    maxSize = initSize ;
+    top_p = -1;  
 }
 ```
 
+#### push(x)：
+
+* 将top_p加1，将x放入top_p指出的位置中。但要注意数组满的情况
+
+```c++
+template <class elemType>
+void seqStack<elemType>::push(const elemType &x) { 
+    if (top_p == maxSize - 1)
+        doubleSpace();
+    elem[++top_p] = x; 
+}
 ```
-#define N 500010
 
-using namespace std; 
+### 2. 链接栈
 
-int head[100010], nxt[N], val[N], out[N], cnt;
+#### --- 类模板 ---
 
-int main() {
-    int n, m, t, x, y;
-    cin >> n >> m;
-    while (m--) {
-        cin >> t;
-        if (t == 1) {
-            cin >> x >> y;
-            val[++cnt] = y;
-            nxt[cnt] = head[x];
-            head[x] = cnt;
-        }
-        else if (t == 2) {
-            cin >> x;
-            head[x] = nxt[head[x]];
-        }
-        else {
-            for (int i = 1; i <= n; i++) {
-                int oc = 0, pos = head[i];
-                while (pos) {
-                    out[++oc] = val[pos];
-                    pos = nxt[pos];
-                }
-                if (oc == 0)
-                    cout << "none";
-                while (oc)
-                    cout << out[oc--] << " ";
-                cout << endl;
+```c++
+template <class elemType>
+class linkStack: public stack<elemType> {
+    private:
+        struct node {
+            elemType  data;
+            node *next;
+            node(const elemType &x, node *N = NULL) { 
+                data = x; 
+                next = N;
             }
-        }
+            node():next(NULL) {}
+            ~node() {}
+        };
+
+        node *top_p;
+        
+    public:
+        // 构造函数：将top_p设为空指针
+        linkStack() { top_p = NULL; }	   
+        ~linkStack();
+        // isEmpty()：判top_p是否为空指针
+        bool isEmpty() const { return   top_p == NULL; }
+        // push(x)：在表头执行单链表的插入。
+        void push(const elemType &x) { op_p = new node(x, top_p); }
+        elemType pop();
+        // top()：返回top_p指向的结点的值。
+        elemType top() const { return top_p->data; }	
+```
+
+#### 析构函数：
+
+- 注意需要释放空间。
+
+```c++
+template <class elemType>
+linkStack<elemType>::~linkStack() {
+    node *tmp;
+
+    while (top_p != NULL) {
+        tmp = top_p; 
+        top_p = top_p ->next;
+        delete tmp;
     }
-    return 0;
 }
 ```
+
+#### pop()：
+
+* 出栈操作，在表头执行单链表的删除。
+
+```c++
+template <class elemType>
+elemType linkStack<elemType>::pop() {
+    node *tmp = top_p;
+    elemType x = tmp->data;              
+
+    top_p = top_p->next;                   
+    delete tmp;                          
+    return x;
+} 
+```
+
+## 三、队列
+
+### 1. 顺序队列
+
+* 顺序队列也是通过一个`数组`来实现
+
+* 节点个数最多为`MaxSize`个，下标范围从`0`到`MaxSize-1`
+
+* 组织方式：
+
+  1. 队头位置固定`O(N)`
+  2. 队头位置不固定`O(1) 浪费空间`
+  3. 循环队列`空间时间的复杂度都是O(1)`
+
+  <img src="imgs/6JJREtI73PB3j6Ehqg_02.png!png" alt="img" style="zoom:33%;" /><img src="imgs/14kMf1uDW91OQ0E8Je2k5.png!png" alt="img" style="zoom:33%;" /><img src="imgs/qIGU-nD2FuRVQFfoADg_m.png!png" alt="img" style="zoom:33%;" />
+
+* 实现`仅循环队列`：
+
+  ```c++
+  template <class elemType>
+  class seqQueue: public queue<elemType> {
+      private:
+          elemType *elem;
+          int maxSize;
+          // 队头和队尾
+          int front, rear;
+          void doubleSpace();
+      public:
+          seqQueue(int size = 10)；
+          // 析构函数：收回动态数组
+          ~seqQueue() { delete [] elem ; }
+          // 判队列是否为空：队头是否等于队尾
+          bool isEmpty() { return front == rear; }
+          void enQueue(const elemType &x);
+          elemType deQueue();
+          // 访问队头元素
+          elemType getHead() { return elem[(front + 1) % maxSize]; }
+  };
+  
+  // 构造函数
+  template <class elemType>
+  seqQueue<elemType>::seqQueue(int size) { 
+      elem = new elemType[size];
+      maxSize = size; 
+      front = rear = 0;
+  } 
+  
+  // 入列
+  template <class elemType>
+  void seqQueue<elemType>::enQueue(const elemType &x){
+      if ((rear+1)%maxSize == front) doubleSpace();
+      rear = (rear+1) % maxSize;
+      elem[rear] = x;
+  }
+  
+  // 出列
+  template <class elemType>
+  elemType seqQueue<elemType>::deQueue(){
+      front = (front+1) % maxSize;
+      return elem[front]
+  }
+  
+  // doublespace
+  template <class elemType>
+  void seqQueue<elemType>::doubleSpace(){
+      elemType *tmp = elem;
+      elem = new elemType[maxSize*2];
+      for (int i=0; i<maxSize; i++){
+          elem[i] = tmp[(front+1) % maxSize];
+      }
+      
+      front = 0;
+      rear = maxSize - 1;
+      maxSize *= 2;
+      delete [] tmp;
+  }
+  ```
+
+### 2. 链接队列
+
+* 实现
+
+  ```c++
+  template <class elemType>
+  class linkQueue: public queue<elemType>{
+      private:
+      	struct node{
+              eleType data;
+              node *next;
+              node(const elemType &x, node *N = NULL){data=x; next=N;}
+              node():next(NULL){}
+              ~node(){}
+          };
+      node *front, *rear;
+      
+      public:
+      	linkQueue(){front = rear = NULL;}
+      	~linkQueue();
+      	bool isEmpty(){return front == NULL;}
+      	void enQueue(const elemType &x);
+      	elemType deQueue();
+      	elemType getHead(){return front->data;}
+  }
+  
+  // 入列
+  template <class elemType>
+  void linkQueue<elemType>::enQueue(const elemType &x){
+      if (rear == NULL){
+          front = rear = new node(x);		 	// 给空队列增加第一个元素
+      }
+      else{
+          rear = rear->next = new node(x);	// 正常情况
+      }
+  }
+  
+  // 出列
+  template <class elemType>
+  elemType linkQueue<elemType>::deQueue(){
+  	node *tmp = front;
+      elemType value = front->data;
+      front = front->next;
+      delete tmp;
+      
+      // if null
+      if (front==NULL) rear = NULL;
+      return
+  }
+  ```
+  
+
+### 3. 应用
+
+#### 3.1. 车厢重排
+
+#### 3.2. 字符串
+
+* 
