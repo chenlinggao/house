@@ -1,0 +1,144 @@
+{
+  "main": {
+    "id": "e9a572aa66b8cc00",
+    "type": "split",
+    "children": [
+      {
+        "id": "1113068fcac0bb36",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "notes/2021_Anklin_Learning Whole-Slide_KEY-E38HDA89.md",
+            "mode": "preview",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fa6f94c6ba0e8dd1",
+    "type": "split",
+    "children": [
+      {
+        "id": "28a098b3479ba7fe",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bdd184641c730e5a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "e8314b0470152aca",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b6f6943dfbe181e5",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "547a952b2e0040e9",
+    "type": "split",
+    "children": [
+      {
+        "id": "6167b1f3c64186b0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a9fe55d8d9b4c76e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "notes/2021_Anklin_Learning Whole-Slide_KEY-E38HDA89.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3a5823f7d13e3bcc",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "notes/2021_Anklin_Learning Whole-Slide_KEY-E38HDA89.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0e3dcfd1c4a5bc50",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "80071fc9598c1c12",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "notes/2021_Anklin_Learning Whole-Slide_KEY-E38HDA89.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "1113068fcac0bb36",
+  "lastOpenFiles": [
+    "notes/2018_Saltz_Spatial Organization_KEY-NRLCAMXE.md",
+    "notes/2017_Zhu_WSISA：Making Surviva_KEY-KD32LQW3.md",
+    "notes/2017_Schapiro_histoCAT：analysis of_KEY-AI2FZIZT.md",
+    "statics/Dataview 年月统计.md",
+    "searchs/Dataview 卡片笔记.md",
+    "notes/2019_Jordan B. Peterson_12 Rules for Life - _KEY-6P8JENFR.md",
+    "notes/2019_Jordan_人生十二法则.pdf_KEY-9LXGDLC6.md",
+    "notes/undefined_贫穷的本质：我们为什_KEY-RGSCKZHS.md",
+    "notes/2021_Anklin_Learning Whole-Slide_KEY-E38HDA89.md",
+    "notes/2020_Shi_Loss-Based Attention_KEY-W3KIU3LX.md"
+  ]
+}

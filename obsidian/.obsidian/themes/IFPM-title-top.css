@@ -1,0 +1,34 @@
+/*--DKLN-V1.0.0-IFPM--*/
+
+/*高亮部分内文本黑色*/
+
+div span.highlight {
+    color: black;
+}
+
+
+/*下拉dataview+metaedit内部文本颜色+下拉框宽度*/
+
+div>p>select {
+    color: darkcyan;
+    width: 15em
+}
+
+
+/* 表格居中 */
+
+table {
+    margin: auto;
+}
+
+/*左列顶端对齐*/
+
+tbody.table-view-tbody tr td {
+    vertical-align: top;
+}
+
+/*标题居中*/
+
+tr.table-view-tr-header th.table-view-th {
+    text-align: center;
+}
