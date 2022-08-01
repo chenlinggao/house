@@ -13,7 +13,7 @@
 > |馆藏目录||
 > |索书号||
 > |版权|Copyright (c) 2020 Association for the Advancement of Artificial Intelligence|
-> |分类|[[202204, 00_Histology, 202207, MIL]]|
+> |分类|[[00_Histology, 202204, MIL]]|
 > |条目链接|[My Library](zotero://select/library/items/W3KIU3LX)|
 > |PDF 附件|<ul><li><a href="zotero://open-pdf/library/items/3P7B674A">Full Text PDF</a></li><li><a href="zotero://open-pdf/library/items/EKX2QURQ">zhao2020.pdf</a></li></ul>|
 > |关联文献|[[2018_Ilse_Attention-based Deep_KEY-GMXKWTZJ]]、 [[2020_Lu_Data Efficient and W_KEY-R8BCS375]]|
@@ -51,7 +51,7 @@
 > callNumber:: 
 > rights:: Copyright (c) 2020 Association for the Advancement of Artificial Intelligence
 > extra:: 🏷️ _顶会、/Done、📒
-> collection:: [[202204, 00_Histology, 202207, MIL]]
+> collection:: [[00_Histology, 202204, MIL]]
 > tags:: #_顶会 #Done 
 > related:: [[2018_Ilse_Attention-based Deep_KEY-GMXKWTZJ]]、 [[2020_Lu_Data Efficient and W_KEY-R8BCS375]]
 > itemLink:: [My Library](zotero://select/library/items/W3KIU3LX)
@@ -62,13 +62,13 @@
 > dateAdded:: 2022-04-25
 > dateModified:: 2022-07-25
 > year:: 2022
-> dateCurrent:: 2022-07-27
-> time:: 21:04:02
-> week:: 星期三
-> yearMonth:: 2022-07
-> dateWeek:: 2022-07-27 星期三
-> dateTime:: 2022-07-27 21:04:02
-> dateWeekTime:: 2022-07-27 21:04:02 星期三
+> dateCurrent:: 2022-08-01
+> time:: 10:34:17
+> week:: 星期一
+> yearMonth:: 2022-08
+> dateWeek:: 2022-08-01 星期一
+> dateTime:: 2022-08-01 10:34:17
+> dateWeekTime:: 2022-08-01 10:34:17 星期一
 > 
 > abstract:: Although attention mechanisms have been widely used in deep learning for many tasks, they are rarely utilized to solve multiple instance learning (MIL) problems, where only a general category label is given for multiple instances contained in one bag. Additionally, previous deep MIL methods firstly utilize the attention mechanism to learn instance weights and then employ a fully connected layer to predict the bag label, so that the bag prediction is largely determined by the effectiveness of learned instance weights. To alleviate this issue, in this paper, we propose a novel loss based attention mechanism, which simultaneously learns instance weights and predictions, and bag predictions for deep multiple instance learning. Specifically, it calculates instance weights based on the loss function, e.g. softmax+cross-entropy, and shares the parameters with the fully connected layer, which is to predict instance and bag predictions. Additionally, a regularization term consisting of learned weights and cross-entropy functions is utilized to boost the recall of instances, and a consistency cost is used to smooth the training process of neural networks for boosting the model generalization performance. Extensive experiments on multiple types of benchmark databases demonstrate that the proposed attention mechanism is a general, effective and efficient framework, which can achieve superior bag and image classification performance over other state-of-the-art MIL methods, with obtaining higher instance precision and recall than previous attention mechanisms. Source codes are available on https：//github.com/xsshi2015/Loss-Attention.
 

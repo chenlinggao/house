@@ -13,7 +13,7 @@
 > |馆藏目录|87.241 (Q1)|
 > |索书号|1|
 > |版权||
-> |分类|[[202205, 202204, 202206, 00_Histology]]|
+> |分类|[[00_Histology, 202204, 202205, 202206]]|
 > |条目链接|[My Library](zotero://select/library/items/SFUDILLQ)|
 > |PDF 附件|[全文](zotero://open-pdf/library/items/XZJ4BSXF)|
 > |关联文献|[[2021_Pinckaers_Detection of Prostat_KEY-GQKASP9L]]|
@@ -51,7 +51,7 @@
 > callNumber:: 1
 > rights:: 
 > extra:: 🏷️ _顶会、/Done、📒
-> collection:: [[202205, 202204, 202206, 00_Histology]]
+> collection:: [[00_Histology, 202204, 202205, 202206]]
 > tags:: #_顶会 #Done 
 > related:: [[2021_Pinckaers_Detection of Prostat_KEY-GQKASP9L]]
 > itemLink:: [My Library](zotero://select/library/items/SFUDILLQ)
@@ -62,13 +62,13 @@
 > dateAdded:: 2022-04-25
 > dateModified:: 2022-07-27
 > year:: 2022
-> dateCurrent:: 2022-07-28
-> time:: 11:15:09
-> week:: 星期四
-> yearMonth:: 2022-07
-> dateWeek:: 2022-07-28 星期四
-> dateTime:: 2022-07-28 11:15:09
-> dateWeekTime:: 2022-07-28 11:15:09 星期四
+> dateCurrent:: 2022-08-01
+> time:: 10:17:48
+> week:: 星期一
+> yearMonth:: 2022-08
+> dateWeek:: 2022-08-01 星期一
+> dateTime:: 2022-08-01 10:17:48
+> dateWeekTime:: 2022-08-01 10:17:48 星期一
 > 
 > abstract:: 
 

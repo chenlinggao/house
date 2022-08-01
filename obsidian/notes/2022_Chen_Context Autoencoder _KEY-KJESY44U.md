@@ -13,7 +13,7 @@
 > |馆藏目录||
 > |索书号||
 > |版权||
-> |分类|[[202207]]|
+> |分类|[[00_Histology]]|
 > |条目链接|[My Library](zotero://select/library/items/KJESY44U)|
 > |PDF 附件|[arXiv Fulltext PDF](zotero://open-pdf/library/items/UK9GCBM9)|
 > |关联文献|[[2021_He_Masked Autoencoders _KEY-MAC94JRI]]|
@@ -51,8 +51,8 @@
 > callNumber:: 
 > rights:: 
 > extra:: 🏷️ _empahsis、_read、Computer Science - Computer Vision and Pattern Recognition
-> collection:: [[202207]]
-> tags:: #_empahsis #Computer_Science_-_Computer_Vision_and_Pattern_Recognition #Done 
+> collection:: [[00_Histology]]
+> tags:: #_empahsis #Done #Computer_Science_-_Computer_Vision_and_Pattern_Recognition
 > related:: [[2021_He_Masked Autoencoders _KEY-MAC94JRI]]
 > itemLink:: [My Library](zotero://select/library/items/KJESY44U)
 > pdfLink:: [arXiv Fulltext PDF](zotero://open-pdf/library/items/UK9GCBM9)
@@ -62,13 +62,13 @@
 > dateAdded:: 2022-07-03
 > dateModified:: 2022-07-26
 > year:: 2022
-> dateCurrent:: 2022-07-27
-> time:: 21:03:16
-> week:: 星期三
-> yearMonth:: 2022-07
-> dateWeek:: 2022-07-27 星期三
-> dateTime:: 2022-07-27 21:03:16
-> dateWeekTime:: 2022-07-27 21:03:16 星期三
+> dateCurrent:: 2022-08-01
+> time:: 10:34:17
+> week:: 星期一
+> yearMonth:: 2022-08
+> dateWeek:: 2022-08-01 星期一
+> dateTime:: 2022-08-01 10:34:17
+> dateWeekTime:: 2022-08-01 10:34:17 星期一
 > 
 > abstract:: We present a novel masked image modeling (MIM) approach, context autoencoder (CAE), for self-supervised representation pretraining. The goal is to pretrain an encoder by solving the pretext task：estimate the masked patches from the visible patches in an image. Our approach first feeds the visible patches into the encoder, extracting the representations. Then, we make predictions from visible patches to masked patches in the encoded representation space. We introduce an alignment constraint, encouraging that the representations for masked patches, predicted from the encoded representations of visible patches, are aligned with the masked patch presentations computed from the encoder. In other words, the predicted representations are expected to lie in the encoded representation space, which empirically shows the benefit to representation learning. Last, the predicted masked patch representations are mapped to the targets of the pretext task through a decoder. In comparison to previous MIM methods (e.g., BEiT) that couple the encoding and pretext task completion roles, our approach benefits the separation of the representation learning (encoding) role and the pretext task completion role, improving the representation learning capacity and accordingly helping more on downstream tasks. In addition, we present the explanations about why contrastive pretraining and supervised pretraining perform similarly and why MIM potentially performs better. We demonstrate the effectiveness of our CAE through superior transfer performance in downstream tasks：semantic segmentation, and object detection and instance segmentation.
 

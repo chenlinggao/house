@@ -13,7 +13,7 @@
 > |馆藏目录|11.037 (Q1)|
 > |索书号|1|
 > |版权||
-> |分类|[[202207]]|
+> |分类|[[00_Histology]]|
 > |条目链接|[My Library](zotero://select/library/items/U2KNW9RR)|
 > |PDF 附件|[IEEE Xplore Full Text PDF](zotero://open-pdf/library/items/4PF754AS)|
 > |关联文献||
@@ -51,8 +51,8 @@
 > callNumber:: 1
 > rights:: 
 > extra:: 🏷️ _empahsis、_read、Feature extraction、Image analysis、Knowledge distillation、Lymph nodes、Metastasis、Multi-instance learning、Task analysis、Thyroid、Transformer、Transformers、Whole slide image analysis
-> collection:: [[202207]]
-> tags:: #_empahsis #Feature_extraction #Knowledge_distillation #Lymph_nodes #Metastasis #Task_analysis #Image_analysis #Transformers #Whole_slide_image_analysis #Multi-instance_learning #Thyroid #Transformer #Done 
+> collection:: [[00_Histology]]
+> tags:: #_empahsis #Done #Feature_extraction #Image_analysis #Knowledge_distillation #Lymph_nodes #Metastasis #Multi-instance_learning #Task_analysis #Thyroid #Transformer #Transformers #Whole_slide_image_analysis
 > related:: 
 > itemLink:: [My Library](zotero://select/library/items/U2KNW9RR)
 > pdfLink:: [IEEE Xplore Full Text PDF](zotero://open-pdf/library/items/4PF754AS)
@@ -62,13 +62,13 @@
 > dateAdded:: 2022-06-08
 > dateModified:: 2022-07-26
 > year:: 2022
-> dateCurrent:: 2022-07-27
-> time:: 21:03:16
-> week:: 星期三
-> yearMonth:: 2022-07
-> dateWeek:: 2022-07-27 星期三
-> dateTime:: 2022-07-27 21:03:16
-> dateWeekTime:: 2022-07-27 21:03:16 星期三
+> dateCurrent:: 2022-08-01
+> time:: 10:34:17
+> week:: 星期一
+> yearMonth:: 2022-08
+> dateWeek:: 2022-08-01 星期一
+> dateTime:: 2022-08-01 10:34:17
+> dateWeekTime:: 2022-08-01 10:34:17 星期一
 > 
 > abstract:: The gold standard for diagnosing lymph node metastasis of papillary thyroid carcinoma is to analyze the whole slide histopathological images (WSIs). Due to the large size of WSIs, recent computer-aided diagnosis approaches adopt the multi-instance learning (MIL) strategy and the key part is how to effectively aggregate the information of different instances (patches). In this paper, a novel transformer-guided framework is proposed to predict lymph node metastasis from WSIs, where we incorporate the transformer mechanism to improve the accuracy from three different aspects. First, we propose an effective transformer-based module for discriminative patch feature extraction, including a lightweight feature extractor with a pruned transformer (Tiny-ViT) and a clustering-based instance selection scheme. Next, we propose a new Transformer-MIL module to capture the relationship of different discriminative patches with sparse distribution on WSIs and better nonlinearly aggregate patch-level features into the slide-level prediction. Considering that the slide-level annotation is relatively limited to training a robust Transformer-MIL, we utilize the pathological relationship between the primary tumor and its lymph node metastasis and develop an effective attention-based mutual knowledge distillation (AMKD) paradigm. Experimental results on our collected WSI dataset demonstrate the efficiency of the proposed Transformer-MIL and attention-based knowledge distillation. Our method outperforms the state-of-the-art methods by over 2.72% in AUC (area under the curve).
 

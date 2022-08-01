@@ -13,7 +13,7 @@
 > |馆藏目录|11.037 (Q1)|
 > |索书号|1|
 > |版权||
-> |分类|[[202207]]|
+> |分类|[[00_Histology]]|
 > |条目链接|[My Library](zotero://select/library/items/Q6KHYAHG)|
 > |PDF 附件|[IEEE Xplore Full Text PDF](zotero://open-pdf/library/items/ETZQZCL2)|
 > |关联文献||
@@ -51,7 +51,7 @@
 > callNumber:: 1
 > rights:: 
 > extra:: 🏷️ _empahsis、/Done、📒、Deep learning、Digital pathology、Feature extraction、Graph convolutional network、Lung、Lung cancer、Pathology、Training、Transformers、Tumors、Vision transformer
-> collection:: [[202207]]
+> collection:: [[00_Histology]]
 > tags:: #_empahsis #Done #Deep_learning #Digital_pathology #Feature_extraction #Graph_convolutional_network #Lung #Lung_cancer #Pathology #Training #Transformers #Tumors #Vision_transformer
 > related:: 
 > itemLink:: [My Library](zotero://select/library/items/Q6KHYAHG)
@@ -62,13 +62,13 @@
 > dateAdded:: 2022-06-08
 > dateModified:: 2022-07-26
 > year:: 2022
-> dateCurrent:: 2022-07-27
-> time:: 21:03:16
-> week:: 星期三
-> yearMonth:: 2022-07
-> dateWeek:: 2022-07-27 星期三
-> dateTime:: 2022-07-27 21:03:16
-> dateWeekTime:: 2022-07-27 21:03:16 星期三
+> dateCurrent:: 2022-08-01
+> time:: 10:34:17
+> week:: 星期一
+> yearMonth:: 2022-08
+> dateWeek:: 2022-08-01 星期一
+> dateTime:: 2022-08-01 10:34:17
+> dateWeekTime:: 2022-08-01 10:34:17 星期一
 > 
 > abstract:: Deep learning is a powerful tool for whole slide image (WSI) analysis. Typically, when performing supervised deep learning, a WSI is divided into small patches, trained and the outcomes are aggregated to estimate disease grade. However, patch-based methods introduce label noise during training by assuming that each patch is independent with the same label as the WSI and neglect overall WSI-level information that is significant in disease grading. Here we present a Graph-Transformer (GT) that fuses a graph-based representation of an WSI and a vision transformer for processing pathology images, called GTP, to predict disease grade. We selected 4; 818 WSIs from the Clinical Proteomic Tumor Analysis Consortium (CPTAC), the National Lung Screening Trial (NLST), and The Cancer Genome Atlas (TCGA), and used GTP to distinguish adenocarcinoma (LUAD) and squamous cell carcinoma (LSCC) from adjacent non-cancerous tissue (normal). First, using NLST data, we developed a contrastive learning framework to generate a feature extractor. This allowed us to compute feature vectors of individual WSI patches, which were used to represent the nodes of the graph followed by construction of the GTP framework. Our model trained on the CPTAC data achieved consistently high performance on three-label classification (normal versus LUAD versus LSCC：mean accuracy= 91.2 ± 2.5%) based on five-fold cross-validation, and mean accuracy = 82.3 ± 1.0% on external test data (TCGA). We also introduced a graph-based saliency mapping technique, called GraphCAM, that can identify regions that are highly associated with the class label. Our findings demonstrate GTP as an interpretable and effective deep learning framework for WSI-level classification.
 

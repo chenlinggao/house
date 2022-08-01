@@ -1,0 +1,5 @@
+{
+  "folder": "daily",
+  "template": "template/template_daily",
+  "format": "MM-DD-YY(Wo)"
+}

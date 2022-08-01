@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "1113068fcac0bb36",
+        "id": "042efecb58c2f4ca",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "notes/2021_Anklin_Learning Whole-Slide_KEY-E38HDA89.md",
+            "file": "searchs/Dataview 卡片笔记.md",
             "mode": "preview",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/2021_Anklin_Learning Whole-Slide_KEY-E38HDA89.md",
+                "file": "searchs/Dataview 卡片笔记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/2021_Anklin_Learning Whole-Slide_KEY-E38HDA89.md",
+                "file": "searchs/Dataview 卡片笔记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/2021_Anklin_Learning Whole-Slide_KEY-E38HDA89.md"
+                "file": "searchs/Dataview 卡片笔记.md"
               }
             }
           }
@@ -128,17 +128,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "1113068fcac0bb36",
+  "active": "042efecb58c2f4ca",
   "lastOpenFiles": [
-    "notes/2018_Saltz_Spatial Organization_KEY-NRLCAMXE.md",
-    "notes/2017_Zhu_WSISA：Making Surviva_KEY-KD32LQW3.md",
-    "notes/2017_Schapiro_histoCAT：analysis of_KEY-AI2FZIZT.md",
-    "statics/Dataview 年月统计.md",
+    "notes/2019_Tokunaga_Adaptive Weighting M_KEY-RF357FGI.md",
+    "notes/2019_Graham_Hover-Net：Simultaneo_KEY-RTLDHPKM.md",
     "searchs/Dataview 卡片笔记.md",
-    "notes/2019_Jordan B. Peterson_12 Rules for Life - _KEY-6P8JENFR.md",
-    "notes/2019_Jordan_人生十二法则.pdf_KEY-9LXGDLC6.md",
-    "notes/undefined_贫穷的本质：我们为什_KEY-RGSCKZHS.md",
-    "notes/2021_Anklin_Learning Whole-Slide_KEY-E38HDA89.md",
-    "notes/2020_Shi_Loss-Based Attention_KEY-W3KIU3LX.md"
+    "statics/Dataview 年月统计.md",
+    "template/template_daily.md",
+    "daily/08-01-22(31周).md",
+    "notes/2019_Campanella_Clinical-grade compu_KEY-SFUDILLQ.md",
+    "notes/2017_Schapiro_histoCAT：analysis of_KEY-AI2FZIZT.md",
+    "notes/2017_Zhu_WSISA：Making Surviva_KEY-KD32LQW3.md",
+    "daily/2022-08-01.md"
   ]
 }
